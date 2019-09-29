@@ -8,10 +8,10 @@ class function{
 	public:
 		function();
 		~function();
-		double f1();
-		double f2();
-		double f3();
-		double f4();
+		double f1(double);
+		double f2(double);
+		double f3(double);
+		double f4(double);
 
 
 
