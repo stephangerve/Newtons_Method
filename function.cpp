@@ -17,7 +17,7 @@ function::~function(){
 
 double function::fx(double x){
 	switch(fnum){
-		case 0: return x^2;
+		case 0: return pow(x,2);
 			break;
 
 		case 1: return x - 2 * sin(x);
