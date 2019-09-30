@@ -2,12 +2,12 @@
 #define FUNCTION_H_EXISTS
 
 
-class function{
+class funct{
 
 	private:
 	public:
-		function();
-		~function();
+		funct();
+		~funct();
 		double f1(double);
 		double f2(double);
 		double f3(double);

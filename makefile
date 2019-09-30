@@ -1,5 +1,5 @@
-target: main.o newton.o function.o derivatve.o
-	g++ --std=c++11 -o newtonsMethod main.o newton.o
+target: main.o newton.o function.o derivative.o
+	g++ --std=c++11 -o newtonsMethod main.o newton.o function.o derivative.o
 
 main.o:	main.cpp newton.h
 	g++ --std=c++11 -c main.cpp newton.h
@@ -19,4 +19,5 @@ run:
 
 clean:	
 	rm *.o
+	rm *.gch
 	rm newtonsMethod

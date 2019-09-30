@@ -4,19 +4,18 @@
 class derivative{
 	
 	private:
+	public:
 		derivative();
 		~derivative();
-
-	public:
-		centraldiff();
-
+		double differentiate(double);
+		double machineEpsilon();
 
 
 
 
 
 
-}
+};
 
 
 
