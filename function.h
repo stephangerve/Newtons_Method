@@ -12,7 +12,7 @@ class function{
 	public:
 		function();
 		~function();
-		double fx(double);
+		double f(double);
 		void printFunctions();
 
 

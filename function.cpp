@@ -15,9 +15,9 @@ function::~function(){
 
 }
 
-double function::fx(double x){
+double function::f(double x){
 	switch(fnum){
-		case 0: return pow(x,2);
+		case 0: return pow(x,2) + 4*x + 4;
 			break;
 
 		case 1: return x - 2 * sin(x);
@@ -42,7 +42,7 @@ double function::fx(double x){
 }	
 
 void function::printFunctions(){
-	std::cout << "0. f(x) = x^2" << std::endl;
+	std::cout << "0. f(x) = x^2 + 4*x + 4" << std::endl;
 	std::cout << "1. f(x) = x - 2*sin(x)" << std::endl;
 	std::cout << "2. f(x) = x^3 - sin(x) - 7" << std::endl;
 	std::cout << "3. f(x) = x + sin(x) - 1" << std::endl;

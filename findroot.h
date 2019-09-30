@@ -10,12 +10,14 @@
 class findroot{
 	
 	private:
-		int n;	
+		int n;
+		double xn; 
+		double xn1;	
 	public:
 		findroot();
 		~findroot();
-		function *y = new function();
-		derivative *dydx = new derivative();		
+		function y;
+		derivative dydx;		
 		void newtons_method();
 
 };
