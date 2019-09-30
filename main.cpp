@@ -1,17 +1,14 @@
+/*
+ *	main.cpp
+ */
 #include <iostream>
-#include "newton.h"
-#include "function.h"
-#include "derivative.h"
+#include "findroot.h"
 
 int main(){
 
-	funct *y = new funct();
-	newton *method = new newton();
-	derivative *dydx = new derivative();
-	method->compute();
-	std::cout << dydx->machineEpsilon() << std::scientific << std::endl;
-	delete y;
-	delete method;
+	findroot *approximate = new findroot();
+	approximate->newtons_method();
+	delete approximate;
 
 	return 0;
 

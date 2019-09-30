@@ -1,18 +1,19 @@
+/*
+ *	function.h
+ */
 #ifndef FUNCTION_H_EXISTS
 #define FUNCTION_H_EXISTS
 
 
-class funct{
+class function{
 
 	private:
+		int fnum = 0;
 	public:
-		funct();
-		~funct();
-		double f1(double);
-		double f2(double);
-		double f3(double);
-		double f4(double);
-
+		function();
+		~function();
+		double fx(double);
+		void printFunctions();
 
 
 

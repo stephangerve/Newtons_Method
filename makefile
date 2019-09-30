@@ -1,23 +1,23 @@
-target: main.o newton.o function.o derivative.o
-	g++ --std=c++11 -o newtonsMethod main.o newton.o function.o derivative.o
+target: main.o findroot.o function.o derivative.o
+	g++ --std=c++11 -o program main.o findroot.o function.o derivative.o
 
-main.o:	main.cpp newton.h
-	g++ --std=c++11 -c main.cpp newton.h
+main.o:	main.cpp findroot.h
+	g++ --std=c++11 -c main.cpp findroot.h
 
-newton.o: newton.cpp newton.h
-	g++ --std=c++11 -c newton.cpp newton.h
+findroot.o: findroot.cpp findroot.h
+	g++ --std=c++11 -c findroot.cpp findroot.h
 
-function.o: function.cpp function.h
-	g++ --std=c++11 -c function.cpp function.h
+function.o: function.cpp function.h derivative.h
+	g++ --std=c++11 -c function.cpp function.h derivative.h
 
 derivative.o: derivative.cpp derivative.h
 	g++ --std=c++11 -c derivative.cpp derivative.h
 
 run:	
 	clear
-	./newtonsMethod
+	./program
 
 clean:	
 	rm *.o
 	rm *.gch
-	rm newtonsMethod
+	rm program

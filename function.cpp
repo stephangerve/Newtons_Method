@@ -1,34 +1,51 @@
+/*
+ *	function.cpp
+ */
 #include <iostream>
 #include "function.h"
 #include <cmath>
 
-funct::funct(){
+function::function(){
+	printFunctions();
+	std::cout << "Choose a function: ";
+	std::cin >> fnum;
+}
+
+function::~function(){
 
 }
 
-funct::~funct(){
+double function::fx(double x){
+	switch(fnum){
+		case 0: return x^2;
+			break;
 
-}
+		case 1: return x - 2 * sin(x);
+			break;
 
-double funct::f1(double x){
-	return x - 2*sin(x);
-}
+		case 2:	return pow(x,3) - sin(x) - 7;
+			break;
 
-double funct::f2(double x){
-	return pow(x,3) - sin(x) - 7;
-}
+		case 3: return x + sin(x) - 1;
+			break;
 
-double funct::f3(double x){
-	return x + sin(x) - 1;
-}
-
-double funct::f4(double x){
-	if(x >= 2){
-		return pow(x,5) + pow(x,2) - 7*pow(x,3) - 1;
+		case 4: if(x >= 2){
+				return pow(x,5) + pow(x,2) - 7*pow(x,3) - 1;
+				break;
+			}
+			else{
+				return nan("");
+				break;
+			}
 	}
-	else{
-		return std::nan("");
 
-	}
-	
 }	
+
+void function::printFunctions(){
+	std::cout << "0. f(x) = x^2" << std::endl;
+	std::cout << "1. f(x) = x - 2*sin(x)" << std::endl;
+	std::cout << "2. f(x) = x^3 - sin(x) - 7" << std::endl;
+	std::cout << "3. f(x) = x + sin(x) - 1" << std::endl;
+	std::cout << "4. f(x) = x^5 + x^2 - 7*x^3 - 1, x >= 2" << std::endl;
+
+}
