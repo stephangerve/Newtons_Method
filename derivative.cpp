@@ -16,7 +16,7 @@ derivative::~derivative(){
 
 double derivative::differentiate(function *Y, double X){
 	/*return ((Y->f(X + machineEpsilon()) - (Y->f(X - machineEpsilon())))/(2.0*machineEpsilon()));*/	
-	return Y->f(X + machineEpsilon()) - Y->f(X - machineEpsilon());
+	return Y->f(X + machineEpsilon());// - Y->f(X - machineEpsilon());
 }
 
 double derivative::machineEpsilon(){

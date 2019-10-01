@@ -4,7 +4,6 @@
 #include "function.h"
 #include "derivative.h"
 
-
 findroot::findroot(){
 	std::cout << "Root Approximation Program" << std::endl;
 	std::cout << "Enter the number of iterations: ";
