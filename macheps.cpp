@@ -31,10 +31,12 @@ double macheps(){
 	double y = 0.0;
 	double x = 0.0;
 	double dist = 0.0;
-	std::cout << "count" << std::setw(20);
-	std::cout << "eps" << std::setw(20);
-	std::cout << "y = 1 + e" << std::setw(20);
-	std::cout << "x = 1 - e" << std::setw(20);
+	int width = 35;
+	int sigdig = 30;
+	std::cout << "count" << std::setw(width);
+	std::cout << "eps" << std::setw(width);
+	std::cout << "y = 1 + e" << std::setw(width);
+	std::cout << "x = 1 - e" << std::setw(width);
 	std::cout << "1 - (y/x)" << std::endl;
 	std::cout << "_____________________________________________________________________________________" << std::endl;
 	while((1.0 + eps) != 1.0){
@@ -44,14 +46,15 @@ double macheps(){
 		x = 1.0 - eps;
 		dist = 1 - (y/x);
 		if(count < 10){
-			std::cout << "0" << count << std::setw(20);
+			std::cout << "0" << count << std::setw(width);
 		}
 		else{
-			std::cout << count << std::setw(20);
+			std::cout << count << std::setw(width);
 		}
-		std::cout << ios::precision(16) << eps << std::setw(20);
-		std::cout << y << std::setw(20);
-		std::cout << x << std::setw(20);
+		std::cout << std::fixed << std::setprecision(sigdig); 
+		std::cout << eps << std::setw(width);
+		std::cout << y << std::setw(width);
+		std::cout << x << std::setw(width);
 		std::cout << dist << std::endl;	
 	}
 	//std::cout << "final count = " << count << std::endl;
